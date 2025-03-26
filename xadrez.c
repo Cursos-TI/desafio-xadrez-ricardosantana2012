@@ -1,32 +1,56 @@
 #include <stdio.h>
-
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
-
-    return 0;
+#include <time.h>
+#include <stdlib.h>
+void FuncaoRainha(int n){
+    printf("Rainha move:\n");
+    for (int i = 1; i <= n; i++)
+    {
+        printf("Esquerda\n");
+    }
 }
+
+void FuncaoTorre(int n){
+    printf("Torre move:\n");
+    for (int i = 1; i <= n; i++)
+    {
+        printf("Direita\n");
+    }
+}
+void FuncaoBispo(int n){
+    printf("Bispo move:\n");
+    char espaco[10]=" ";
+    for(int i =1; i<=n;i++){                 
+        if (i<=n)
+        {
+           printf("Cima, ");
+        }
+        printf("direita");
+        printf("\n");       
+        }
+}    
+
+
+    int main(){
+        
+        int bispo = 5 ,torre = 5 ,rainha=8 , j=1;
+        int cavalo1= 1,cavalo2= 2;
+        
+    printf("#### JOGO DE XADREZ###\n\n");
+
+
+        //Mostra como o cavalo vai andar no tabuleiro sem dizer a direção.
+        printf("Cavalo move:\n");
+        for(int i=0; i<=cavalo1;i++){
+            printf("C");
+        }
+        printf("\n");
+        for(int i = 1; i<=cavalo2 ; i++){
+            printf("C\n")
+;       }
+       
+        FuncaoBispo(bispo);    
+
+        FuncaoTorre(torre);
+        
+        FuncaoRainha(rainha);
+    }
